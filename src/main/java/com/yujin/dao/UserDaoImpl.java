@@ -12,15 +12,16 @@ import java.util.List;
 @Repository
 public class UserDaoImpl implements UserDao{
 
+    @Autowired
     private SessionFactory sessionFactory;
-
+/*
     @Autowired
     public UserDaoImpl(EntityManagerFactory factory) {
         if(factory.unwrap(SessionFactory.class) == null){
             throw new NullPointerException("factory is not a hibernate factory");
         }
         this.sessionFactory = factory.unwrap(SessionFactory.class);
-    }
+    }*/
 
     @Override
     public void save(User user) {
